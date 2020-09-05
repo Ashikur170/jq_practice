@@ -49,12 +49,28 @@ $(document).ready(function(){
 
   	$(".btn-animate").click(function(){
     	$("div.ball_animate").animate({
-    		left			  : '500px',
+    		left		: '500px',
     		width		: '200px',
     		height		: '200px',
-    		backgroundColor   : '#ff0000',
+    		// backgroundColor   : '#ff0000',
     		borderRadius	: '0'
     	}, 2000);
   	});
 
+  	$(".btn-callback").dblclick(function(){
+    	$(".text-secondary").hide(1000, function(){
+    		alert('The text has been hidden.');
+    	});
+  		$(this).animate({
+  			borderRadius	: '25%'
+  		})
+  	});
+
+
+  	$(".btn_css_set").click(function(){
+    	$(".css-set-text").css({
+    		"background-color"	: "#686de0",
+    		"color"				: "#f6e58d"
+    	});
+  	});
 });
