@@ -69,8 +69,12 @@ $(document).ready(function(){
 
   	$(".btn_css_set").click(function(){
     	$(".css-set-text").css({
-    		"background-color"	: "#686de0",
+    		// "background-color"	: "#686de0",
     		"color"				: "#f6e58d"
     	});
+  	});
+
+  	$(".btn_css_get").click(function(){
+  		alert("Button BG color is " + $(this).css('background-color'));
   	});
 });
